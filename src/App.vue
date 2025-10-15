@@ -9,6 +9,8 @@ onMounted(() => {
     guitarras.value = db
 })
 
+
+
 </script>
 
 <template>
