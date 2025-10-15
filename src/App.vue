@@ -92,6 +92,7 @@ onMounted(() => {
         <div class="row mt-5">
             <Guitarra
                 v-for="guitarra in guitarras"
+                :guitarra="guitarra"
             />
         </div>
     </main>
