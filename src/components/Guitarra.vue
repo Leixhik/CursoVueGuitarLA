@@ -10,6 +10,8 @@
         }
     })
 
+    defineEmits(['agregar-carrito'])
+
 </script>
 
 <template>
@@ -26,7 +28,7 @@
             <button 
                 type="button" 
                 class="btn btn-dark w-100 "
-                @click="incrementar()"> <!-- @click == v-on:click -->
+                @click="$emit('agregar-carrito')"> <!-- @click == v-on:click -->
                 Agregar al Carrito
             </button>
         </div>

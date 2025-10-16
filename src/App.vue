@@ -10,6 +10,9 @@ onMounted(() => {
 })
 
 
+const agregarCarrito = () =>{
+    alert('Diste Click')
+}
 
 </script>
 
@@ -95,6 +98,7 @@ onMounted(() => {
             <Guitarra
                 v-for="guitarra in guitarras"
                 :guitarra="guitarra"
+                @agregar-carrito="agregarCarrito"
             />
         </div>
     </main>
