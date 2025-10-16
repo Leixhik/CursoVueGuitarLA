@@ -14,6 +14,9 @@ onMounted(() => {
 
 
 const agregarCarrito = (guitarra) => {
+    const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
+
+    console.log('existe carrito')
     guitarra.cantidad = 1
     carrito.value.push(guitarra)
 
