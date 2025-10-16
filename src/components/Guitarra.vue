@@ -1,7 +1,4 @@
 <script setup>
-    import { ref } from 'vue'
-
-    const numero = ref(0)
 
     const props = defineProps({
         guitarra: {
@@ -22,13 +19,12 @@
         </div>
         <div class="col-8">
             <h3 class="text-black fs-4 fw-bold text-uppercase">{{ guitarra.nombre }}</h3>
-            <p>{{ numero }}</p>
             <p>{{ guitarra.descripcion }}</p>
             <p class="fw-black text-primary fs-3">${{ guitarra.precio }}</p>
             <button 
                 type="button" 
                 class="btn btn-dark w-100 "
-                @click="$emit('agregar-carrito')"> <!-- @click == v-on:click -->
+                @click="$emit('agregar-carrito', guitarra)"> <!-- @click == v-on:click --> <!-- con emit le pasas información al padre en donde el padre va a realizar la funcion agregar-carrito y después mostrará la guitarra en Proxy(objeto). -->
                 Agregar al Carrito
             </button>
         </div>
