@@ -16,10 +16,12 @@ onMounted(() => {
 const agregarCarrito = (guitarra) => {
     const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
 
-    console.log('existe carrito')
-    guitarra.cantidad = 1
-    carrito.value.push(guitarra)
-
+    if(existeCarrito >= 0) {
+        carrito.value[existeCarrito].cantidad++
+    } else {
+        guitarra.cantidad = 1
+        carrito.value.push(guitarra)
+    }
 }
 
 </script>
